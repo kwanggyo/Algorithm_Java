@@ -152,3 +152,130 @@ public class Practice4 {
 
 :bulb: 참고 : https://limkydev.tistory.com/170
 
+<br>
+
+## length, size
+
+### 1. length
+
+배열의 길이를 알고자 할 때 사용한다.
+
+### 2. length()
+
+문자열의 길이를 알고자 할 때 사용한다.
+
+### 3. size()
+
+컬렉션 프레임워크 타입의 길이를 알고자 할 때 사용한다.
+
+#### 예시
+
+```java
+public class lengthSizeTest{ public static void main(String[] args){ 
+    
+    int[] lengthTest1 = new int[7]; 
+    System.out.println( lengthTest1.length ); // 7 
+    
+    String lengthTest2 = "lengthSizeTest"; 
+    System.out.println( lengthTest2.length() ); // 14 
+    
+    ArrayList<Object> sizeTest = new ArrayList<Object>(); 
+    System.out.println( sizeTest .size() ); // 0 
+    
+	} 
+}
+```
+
+:bulb: 참고 : https://mine-it-record.tistory.com/126
+
+## 절댓값
+
+**Math.abs**
+
+```java
+public class Practice5 {
+
+    public static void main(String[] args) {
+        int number = -5;
+        System.out.println(Math.abs(number));
+    }
+}
+```
+
+## 정렬
+
+**Arrays.sort()**
+
+- 오름차순
+
+  - **Arrays.sort(arr1, 1, arr1.length);** : index 값을 1 ~ 배열의 길이만큼 정해서 그 부분만 sort
+
+  ```java
+  import java.util.Arrays;
+  
+  public class Practice5 {
+  
+      public static void main(String[] args) {
+  
+          int[] arr1 = {-2, 1, 5, 4, 6};
+          Arrays.sort(arr1);
+          // Arrays.sort(arr1, 1, arr1.length);
+          for (int i = 0; i < arr1.length; i++) {
+              System.out.println(arr1[i]);
+          }
+      }
+  }
+  
+  ```
+
+- 내림차순
+
+  - Interger로 선언 해야한다.
+  - **Arrays.sort(arr2, Collections.reverseOrder());**
+
+  ```java
+  import java.util.Arrays;
+  import java.util.Collections;
+  
+  public class Practice5 {
+  
+      public static void main(String[] args) {
+  
+          Integer[] arr2 = {-2, 1, 5, 4, 6};
+          Arrays.sort(arr2, Collections.reverseOrder());
+          for (int j = 0; j < arr2.length; j++) {
+              System.out.println(arr2[j]);
+          }
+      }
+  }
+  
+  ```
+
+- String은 알파벳의 아스키 값으로 비교하여 정렬
+
+:bulb: 추가로 참고 : https://codechacha.com/ko/java-sorting-array/
+
+## Type 확인
+
+**getClass()**
+
+## Char to String
+
+**Character.toString()**
+
+## String to Int
+
+**Interger.parseInt()**
+
+## indexOf()
+
+**특정 문자**나 **문자열**이 **앞에서부터 처음 발견되는 인덱스를 반환**하며 찾지 못했을 경우 **"-1"을 반환**한다.
+
+## Char to Int
+
+1. **A.charAt(0) - '0'**을 해주면 Int로 바뀌게 된다.
+2. **Character.getNumericValue(input.chatAt(i))**
+
+## HashSet
+
+**contains()** : Set안에 객체가 존재하는지 여부를 리턴해준다.
